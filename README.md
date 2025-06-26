@@ -26,3 +26,7 @@ ANTHROPIC_API_KEY=your-anthropic-key
 
 These variables are required for routes under `app/api/*` that interact with the models.
 
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
