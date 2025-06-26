@@ -26,3 +26,13 @@ ANTHROPIC_API_KEY=your-anthropic-key
 
 These variables are required for routes under `app/api/*` that interact with the models.
 
+## Build and Lint
+
+Install dependencies before running the build or lint commands:
+
+```bash
+pnpm install
+pnpm lint
+pnpm build
+```
+
