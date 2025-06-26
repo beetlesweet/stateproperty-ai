@@ -1,5 +1,5 @@
 import { generateText } from "ai"
-import { openai } from "@ai-sdk/openai"
+import { anthropic } from "@ai-sdk/anthropic"
 import { NextResponse } from "next/server"
 
 export async function POST(request: Request) {
@@ -7,7 +7,7 @@ export async function POST(request: Request) {
     const { productInput, productUrl, selectedHook, selectedAngle } = await request.json()
 
     const { text } = await generateText({
-      model: openai("gpt-4o"),
+      model: anthropic("claude-3-opus"),
       prompt: `You are an expert TikTok script writer specializing in jewelry marketing. Create a compelling 60-second TikTok script.
 
 Product Information:
