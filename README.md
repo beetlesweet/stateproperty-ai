@@ -25,6 +25,8 @@ ANTHROPIC_API_KEY=your-anthropic-key
 ```
 
 These variables are required for routes under `app/api/*` that interact with the models.
+If `ANTHROPIC_API_KEY` is not set (and `OPENAI_API_KEY` when using OpenAI models),
+the API routes will respond with a 500 error.
 
 ## Build and Lint
 

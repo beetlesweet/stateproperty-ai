@@ -31,6 +31,12 @@ const HOOK_LIBRARY = [
 ]
 
 export async function POST(request: Request) {
+  if (!process.env.ANTHROPIC_API_KEY) {
+    return NextResponse.json(
+      { error: "ANTHROPIC_API_KEY is not set" },
+      { status: 500 }
+    )
+  }
   try {
     const { productInput, productUrl } = await request.json()
 
